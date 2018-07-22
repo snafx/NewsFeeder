@@ -13,6 +13,9 @@
         <module>news-feeder-common</module>
         <module>news-feeder-integration</module>
         <module>news-feeder-web</module>
+        <module>news-api</module>
+        <module>news-web</module>
+        <module>news-integration</module>
     </modules>
 
     <properties>

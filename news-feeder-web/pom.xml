@@ -9,33 +9,36 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>news-feeder-web</artifactId>
+    <artifactId>news-feeder-web-module</artifactId>
     <packaging>war</packaging>
     <name>news-feeder-web</name>
 
+
     <dependencies>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
 
         <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>me.qkspire</groupId>
-            <artifactId>news-feeder-api</artifactId>
+            <artifactId>news-feeder-api-module</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>me.qkspire</groupId>
-            <artifactId>news-feeder-common</artifactId>
+            <artifactId>news-feeder-integration-module</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>me.qkspire</groupId>
-            <artifactId>news-feeder-integration</artifactId>
+            <artifactId>news-feeder-common-module</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
