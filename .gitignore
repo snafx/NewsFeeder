@@ -1,0 +1,37 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+*.class
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+target/
+.metadata
+bin/
+tmp/
+target/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+news-feeder-api/target/
+news-feeder-common/target/
+news-feeder-integration/target/
+news-feeder-web/target/
+news-feeder-web/src/main/webapp/assets/
+node_modules/
