@@ -10,4 +10,5 @@ public class NewsView {
     public String url;
     public String urlToImage;
     public Date publishedAt;
+    public String source;
 }

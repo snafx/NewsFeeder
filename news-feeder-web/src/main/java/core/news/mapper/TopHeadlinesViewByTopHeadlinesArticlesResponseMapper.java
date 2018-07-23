@@ -27,6 +27,7 @@ public class TopHeadlinesViewByTopHeadlinesArticlesResponseMapper {
         newsView.title = apiArticlesResponse.title;
         newsView.url = apiArticlesResponse.url;
         newsView.urlToImage = apiArticlesResponse.urlToImage;
+        newsView.source = apiArticlesResponse.source.name;
         return newsView;
     }
 }

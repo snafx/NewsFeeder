@@ -1,19 +1,21 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
+import React, {Component} from 'react';
+import NewsFeeder from './NewsFeeder';
+import {loadCSS} from 'fg-loadcss/src/loadCSS';
 
-import React from 'react';
+export default class Main extends Component {
 
-class AppComponent extends React.Component {
-  render() {
-    return (
-      <div className="index">
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
+  componentDidMount() {
+    loadCSS(
+      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#insertion-point-jss'),
     );
   }
+
+  render() {
+    return (
+      <div>
+        <NewsFeeder/>
+      </div>
+    )
+  }
 }
-
-AppComponent.defaultProps = {
-};
-
-export default AppComponent;
