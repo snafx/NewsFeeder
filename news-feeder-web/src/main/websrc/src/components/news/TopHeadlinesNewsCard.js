@@ -18,10 +18,10 @@ import Tooltip from '@material-ui/core/Tooltip';
 import GradeIcon from '@material-ui/icons/Grade';
 import Divider from '@material-ui/core/Divider';
 
+
 const styles = theme => ({
   card: {
-    maxWidth: 400,
-    spacing: 16
+    maxWidth: 250
   },
   media: {
     height: 0,
@@ -61,8 +61,8 @@ class TopHeadlinesNewsCard extends Component {
 
     let renderListNews = listNews.map((news, index) => {
       return (
-        <div>
-          <Card className={classes.card} key={index}>
+        <div className="col-4 py-1" key={index}>
+          <Card style={styles.card} justify="center">
             <CardHeader
               avatar={
                 <Tooltip title={news.source} placement="top">

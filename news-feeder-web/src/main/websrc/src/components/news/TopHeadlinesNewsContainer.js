@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import 'whatwg-fetch';
-import TopHeadlinesNewsCard from './TopHeadlinesNewsCard'
+import TopHeadlinesNewsCard from './TopHeadlinesNewsCard';
 
 
 const API_HEADERS = {
@@ -41,7 +41,9 @@ export default class TopHeadlinesNewsContainer extends Component {
 
   render() {
     return (
-      <TopHeadlinesNewsCard listNews={this.state.news}/>
+      <div>
+        <TopHeadlinesNewsCard listNews={this.state.news}/>
+      </div>
     )
   }
 }

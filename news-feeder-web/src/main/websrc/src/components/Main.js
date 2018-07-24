@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import NewsFeeder from './NewsFeeder';
 import {loadCSS} from 'fg-loadcss/src/loadCSS';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 export default class Main extends Component {
 
@@ -14,6 +16,7 @@ export default class Main extends Component {
   render() {
     return (
       <div>
+        <CssBaseline/>
         <NewsFeeder/>
       </div>
     )
