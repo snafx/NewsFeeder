@@ -3,11 +3,10 @@ package core.news.service;
 import java.util.List;
 import javax.inject.Inject;
 
-import common.enums.TopHeadlinesSources;
 import core.news.mapper.TopHeadlinesResponseToViewMapper;
+import news.model.NewsView;
 import news.model.TopHeadlinesApiRequest;
 import news.model.TopHeadlinesApiResponse;
-import news.model.NewsView;
 import news.service.TopHeadlinesApiService;
 
 public class TopHeadlinesService {
@@ -25,7 +24,6 @@ public class TopHeadlinesService {
 
     private TopHeadlinesApiRequest prepareRequest() {
         TopHeadlinesApiRequest request = new TopHeadlinesApiRequest();
-//        request.topHeadlinesSources = TopHeadlinesSources.CNBC;
         request.sources = "cnbc";
         return request;
     }

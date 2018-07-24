@@ -9,7 +9,8 @@ import news.model.NewsView;
 public class TopHeadlinesResponseToViewMapper {
 
     public List<NewsView> mapToView(TopHeadlinesApiResponse newsResponse) {
-        return newsResponse.articles.stream().map(article -> TopHeadlinesViewByTopHeadlinesArticlesResponseMapper.create().articleResponse(article).map())
+        return newsResponse.articles.stream()
+                                    .map(article -> TopHeadlinesViewByTopHeadlinesArticlesResponseMapper.create().articleResponse(article).map())
                                     .collect(Collectors.toList());
     }
 }

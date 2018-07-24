@@ -7,7 +7,7 @@ public enum TopHeadlinesSources {
     CNBC("CNBC"),
     CNN("CNN"),
     ESPN("ESPN"),
-    FORTUNE("FORTUNE"),
+    FORTUNE("Fortune"),
     INDEPENDENT("Independent"),
     MARCA("Marca"),
     NRK("NRK"),
@@ -15,13 +15,13 @@ public enum TopHeadlinesSources {
     TECHCRUNCH("TechCrunch"),
     TECHRADAR("TechRadar");
 
-    private String trans;
+    private String source;
 
-    TopHeadlinesSources(String trans) {
-        this.trans = trans;
+    TopHeadlinesSources(String source) {
+        this.source = source;
     }
 
-    public String getTrans() {
-        return trans;
+    public String getSource() {
+        return source;
     }
 }

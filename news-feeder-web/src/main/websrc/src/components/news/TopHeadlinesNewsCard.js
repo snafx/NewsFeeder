@@ -1,22 +1,20 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import Tooltip from '@material-ui/core/Tooltip';
 import GradeIcon from '@material-ui/icons/Grade';
-import Divider from '@material-ui/core/Divider';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 
 const styles = theme => ({
@@ -81,39 +79,31 @@ class TopHeadlinesNewsCard extends Component {
             />
             <CardContent>
               <Typography component="p">{news.description}</Typography>
-              <Divider/>
               <Typography align="right" component="i">by {news.author}</Typography>
             </CardContent>
-            <CardActions className={classes.actions} disableActionSpacing>
-              <Tooltip title="Show more" placement="left-start">
-                <IconButton
-                  className={classnames(classes.expand, {
-                    [classes.expandOpen]: this.state.expanded,
-                  })}
-                  onClick={this.handleExpandClick}
-                  aria-expanded={this.state.expanded}
-                  aria-label="show more"
-                >
+            <ExpansionPanel>
+              <ExpansionPanelSummary expandIcon={
+                <Tooltip title="Show more" placement="left">
                   <ExpandMoreIcon/>
-                </IconButton>
-              </Tooltip>
-            </CardActions>
-            <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph variant="body2">
-                  This is an example of a short description:
+                </Tooltip>}>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails>
+                <Typography>
+                  <Typography paragraph variant="body2">
+                    This is an example of a short description:
+                  </Typography>
+                  <Typography paragraph>
+                    {news.description}
+                  </Typography>
+                  <Typography paragraph>
+                    {news.description}
+                  </Typography>
+                  <Button variant="contained" color="primary" href={news.url}>
+                    Read more @ {news.source}
+                  </Button>
                 </Typography>
-                <Typography paragraph>
-                  {news.description}
-                </Typography>
-                <Typography paragraph>
-                  {news.description}
-                </Typography>
-                <Button variant="contained" color="primary" href={news.url}>
-                  Read more @ {news.source}
-                </Button>
-              </CardContent>
-            </Collapse>
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
           </Card>
         </div>
       )
@@ -128,7 +118,7 @@ class TopHeadlinesNewsCard extends Component {
 }
 
 TopHeadlinesNewsCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(TopHeadlinesNewsCard);

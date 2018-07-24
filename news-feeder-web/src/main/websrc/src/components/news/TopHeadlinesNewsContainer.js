@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'whatwg-fetch';
 import TopHeadlinesNewsCard from './TopHeadlinesNewsCard';
+import Filter from '../filter/Filter';
 
 
 const API_HEADERS = {
@@ -12,7 +13,10 @@ export default class TopHeadlinesNewsContainer extends Component {
   constructor() {
     super(...arguments);
     this.state = {
-      news: []
+      news: [],
+      filter: {
+        sources: 'TECHCRUNCH'
+      }
     }
   }
 
@@ -21,9 +25,10 @@ export default class TopHeadlinesNewsContainer extends Component {
   }
 
   getData() {
-    fetch('/news-feeder/api/news/top', {
-      method: 'GET',
-      headers: API_HEADERS
+    fetch('/news-feeder/api/news/by-source', {
+      method: 'POST',
+      headers: API_HEADERS,
+      body: JSON.stringify(this.prepareRequest())
     })
       .then((response) => response.json())
       .then((responseData) => {
@@ -35,13 +40,27 @@ export default class TopHeadlinesNewsContainer extends Component {
         });
       })
       .catch((error) => {
-        console.log('Error while retrieving data', error)
+        console.log('Error while sending data', error)
       });
+  }
+
+  prepareRequest() {
+    let request = this.state.filter;
+    return request;
+  }
+
+  updateFilter(filterUpdated) {
+    this.setState({
+      filter: filterUpdated
+    });
+    console.log('filter', filterUpdated);
+    this.getData();
   }
 
   render() {
     return (
       <div>
+        <Filter value={this.state.filter} updateFilter={this.updateFilter.bind(this)}/>
         <TopHeadlinesNewsCard listNews={this.state.news}/>
       </div>
     )

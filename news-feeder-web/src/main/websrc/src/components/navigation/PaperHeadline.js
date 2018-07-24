@@ -11,7 +11,7 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 3,
     marginTop: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit * 2
-  },
+  }
 });
 
 function PaperSheet(props) {
@@ -32,7 +32,7 @@ function PaperSheet(props) {
 }
 
 PaperSheet.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(PaperSheet);

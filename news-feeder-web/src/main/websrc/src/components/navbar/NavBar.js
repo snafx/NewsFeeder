@@ -5,11 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 
-const styles = {
-  root: {
-    flexGrow: 1
-  }
-};
 export default class NavBar extends Component {
 constructor(props) {
     super(props);
@@ -17,8 +12,6 @@ constructor(props) {
       open: false
     };
   }
-
-
 
   render() {
     return (
@@ -31,7 +24,7 @@ constructor(props) {
             </Typography>
             <IconButton className={'fa fa-2x fa-chevron-circle-left'} disabled={true}/>
               <Button variant="contained">
-                Default
+                HELLO!
               </Button>
             </Toolbar>
         </AppBar>
