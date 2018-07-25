@@ -89,12 +89,28 @@ Starting script:
 ./deploy.sh 
 ```
 This script build all maven modules in the project and web project (by webpack/npm).
+```sh
+If you have problem to open an application correctly, please copy files from 
+news-feeder-web/src/main/websrc/dist/assets to news-feeder-web/src/main/webapp/assets
+and again run ./deploy.sh script
+```
 
-### Modules
+### MODULES
 - api - module where are all REST interfaces and entities used in endpoints
 - common - helper classes
 - integration - module where are classes downloading news from https://newsapi.org/
 - web - backend and frontend News-Feeder app
+
+### SCREEMSHOTS
+![Screen_1](resources/screen_1.jpg)
+
+
+![Screen_2](resources/screen_2.jpg)
+
+
+![Screen_3](resources/screen_3.jpg)
+
+
 
 
 
