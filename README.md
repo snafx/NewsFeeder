@@ -15,7 +15,7 @@ Get breaking news headlines, and search for articles from worldwide publishers.
 
 **API to retrieve headlines and articles from http://newsapi.org/**
 
-### INSTALATION
+### INSTALLATION
 
 News Feeder requires:
 - Linux OS
@@ -46,15 +46,17 @@ password: q1w2e3r4t5y6
 
 **Preprared server has newest application installed**
 
-##### To access application after server is started go to:
+##### To access application after a server is started go to:
 ##### http://localhost:8080/news-feeder/index.html
 
 **NEW SERVER AND APPLICATION DEPLOY**
+
 **Installation/configuration/running Wildfly**
 Download Wildfly-12.0.0.Final from:
+
 http://wildfly.org/downloads/
 
-Unpack it to folder
+Unpack it to a folder
 
 Start server:
 ```sh
@@ -81,7 +83,7 @@ cd wildfly-12.0.0.Final/bin
 
 Your server should be configured correctly.
 
-##### To access application after server is restarted go to:
+##### To access application after a server is restarted go to:
 ##### http://localhost:8080/news-feeder/index.html
 
 ### Project deployment (new)
@@ -90,9 +92,9 @@ Starting script:
 ```sh
 ./deploy.sh 
 ```
-This script build all maven modules in the project and web project (by webpack/npm).
+This script builds all maven modules in the project and web project (by webpack/npm).
 ```sh
-If you have problem to open an application correctly, please copy files from 
+If you have a problem to open an application correctly, please copy files from 
 news-feeder-web/src/main/websrc/dist/assets to news-feeder-web/src/main/webapp/assets
 and again run ./deploy.sh script
 ```
@@ -103,7 +105,7 @@ and again run ./deploy.sh script
 - integration - module where are classes downloading news from https://newsapi.org/
 - web - backend and frontend News-Feeder app
 
-### SCREEMSHOTS
+### SCREENSHOTS
 ![Screen_1](resources/screen_1.jpg)
 
 
