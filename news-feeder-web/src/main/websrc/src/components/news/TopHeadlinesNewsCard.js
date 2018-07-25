@@ -15,6 +15,7 @@ import GradeIcon from '@material-ui/icons/Grade';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import moment from 'moment';
 
 
 const styles = theme => ({
@@ -70,7 +71,7 @@ class TopHeadlinesNewsCard extends Component {
                 </Tooltip>
               }
               title={news.title}
-              subheader={news.publishedAt}
+              subheader={moment(news.publishedAt).format('LLL')}
             />
             <CardMedia
               className={classes.media}
