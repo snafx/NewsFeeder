@@ -30,6 +30,7 @@ Installation steps are designed to work with Linux:
 
 **Installation/running Wildfly 12**
 Download already prepared Wildfly from:
+
 https://www.dropbox.com/s/o3517n08uzbtfs2/wildfly-12.0.0.Final.zip?dl=0
 
 Starting server:
